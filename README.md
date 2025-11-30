@@ -87,7 +87,7 @@ npm start
 
 The frontend will run on http://localhost:4200
 
-### Configure API URL in frontend for deployment
+### Configure API URL in frontend
 
 For production deployment, update the API base URL:
 
