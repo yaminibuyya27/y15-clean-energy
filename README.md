@@ -96,10 +96,7 @@ For production deployment, update the API base URL:
 **File**: `frontend/src/app/config/api.config.ts`
 
 ```typescript
-export const API_CONFIG = {
-  baseUrl: 'http://your-server-ip:3000',  // Change this
-  // ...
-};
+export const API_URL = 'http://localhost:3000';
 ```
 
 ## References
