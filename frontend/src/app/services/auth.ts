@@ -13,6 +13,11 @@ interface LoginResponse {
   message?: string;
 }
 
+interface SignupResponse {
+  success: boolean;
+  message: string;
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -25,6 +30,13 @@ export class Auth {
   public isAuthenticated$ = this.isAuthenticatedSubject.asObservable();
 
   constructor(private http: HttpClient, private router: Router) {}
+
+  signup(username: string, password: string): Observable<SignupResponse> {
+    return this.http.post<SignupResponse>(`${this.apiUrl}/signup`, {
+      username,
+      password
+    });
+  }
 
   login(username: string, password: string): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(`${this.apiUrl}/login`, {

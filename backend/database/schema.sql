@@ -4,6 +4,15 @@
 CREATE DATABASE IF NOT EXISTS y15_clean_energy;
 USE y15_clean_energy;
 
+-- Table for users with encrypted passwords
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) UNIQUE NOT NULL,
+  password_hash VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_username (username)
+);
+
 -- Table for energy investment data
 CREATE TABLE IF NOT EXISTS energy_investments (
   id INT AUTO_INCREMENT PRIMARY KEY,

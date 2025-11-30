@@ -1,4 +1,4 @@
-.login-container {
+.signup-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,7 +11,7 @@
   padding: 2rem;
 }
 
-.login-card {
+.signup-card {
   background: white;
   padding: 3rem;
   border-radius: 12px;
@@ -27,16 +27,15 @@ h1 {
   text-align: center;
 }
 
-h2 {
-  color: #4d5791;
-  font-size: 1.5rem;
+.subtitle {
+  color: #666;
+  font-size: 0.95rem;
   margin-bottom: 2rem;
   text-align: center;
-  font-weight: 400;
 }
 
 form {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .form-group {
@@ -79,7 +78,7 @@ input:disabled {
   border-left: 4px solid #c62828;
 }
 
-.login-button {
+.signup-btn {
   width: 100%;
   padding: 1rem;
   background-color: #4d5791;
@@ -92,62 +91,45 @@ input:disabled {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.login-button:hover:not(:disabled) {
+.signup-btn:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(77, 87, 145, 0.4);
 }
 
-.login-button:active:not(:disabled) {
+.signup-btn:active:not(:disabled) {
   transform: translateY(0);
 }
 
-.login-button:disabled {
+.signup-btn:disabled {
   background-color: #ccc;
   cursor: not-allowed;
   transform: none;
 }
 
-.login-button:focus {
+.signup-btn:focus {
   outline: 2px solid #4d5791;
   outline-offset: 2px;
 }
 
-.login-info {
-  background-color: #e3f2fd;
-  padding: 1rem;
-  border-radius: 6px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #333;
-}
-
-.login-info p {
-  margin: 0.25rem 0;
-}
-
-.login-info strong {
-  color: #1565c0;
-}
-
-.signup-link {
+.login-link {
   text-align: center;
   margin-top: 1.5rem;
   color: #666;
   font-size: 0.95rem;
 }
 
-.signup-link a {
+.login-link a {
   color: #4d5791;
   text-decoration: none;
   font-weight: 600;
 }
 
-.signup-link a:hover {
+.login-link a:hover {
   text-decoration: underline;
 }
 
 @media (max-width: 480px) {
-  .login-card {
+  .signup-card {
     padding: 2rem;
   }
 

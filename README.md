@@ -12,7 +12,9 @@ A Single Page Application (SPA) showcasing recent innovations in clean energy, b
 
 ## Features
 
-- User authentication with JWT
+- User registration and authentication system
+- JWT-based authentication with encrypted passwords (bcrypt)
+- User credentials stored securely in MySQL database
 - Protected routes requiring login
 - Dashboard with 200-word summary on clean energy innovations
 - Technical implementation description

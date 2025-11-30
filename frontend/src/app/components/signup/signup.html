@@ -1,0 +1,71 @@
+<div class="signup-container">
+  <div class="signup-card">
+    <h1>Create Account</h1>
+    <p class="subtitle">Join Y15 Clean Energy Dashboard</p>
+
+    <form (ngSubmit)="onSubmit()" role="form" aria-label="Signup form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          [(ngModel)]="username"
+          placeholder="Enter username (3-50 characters)"
+          [disabled]="loading"
+          required
+          aria-required="true"
+          autocomplete="username"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          placeholder="Enter password (min 4 characters)"
+          [disabled]="loading"
+          required
+          aria-required="true"
+          autocomplete="new-password"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          [(ngModel)]="confirmPassword"
+          placeholder="Re-enter password"
+          [disabled]="loading"
+          required
+          aria-required="true"
+          autocomplete="new-password"
+        />
+      </div>
+
+      <div class="error-message" *ngIf="error" role="alert" aria-live="polite">
+        {{ error }}
+      </div>
+
+      <button
+        type="submit"
+        [disabled]="loading"
+        class="signup-btn"
+        aria-label="Create account"
+      >
+        {{ loading ? 'Creating Account...' : 'Sign Up' }}
+      </button>
+
+      <div class="login-link">
+        Already have an account?
+        <a routerLink="/login" aria-label="Go to login page">Login here</a>
+      </div>
+    </form>
+  </div>
+</div>
