@@ -1,0 +1,25 @@
+# Angular compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Angular cache
+/.angular/cache
+.angular
+
+# Code editors cache
+.vscode
+
+# dependencies
+node_modules
+
+# Angular specific
+.sass-cache/
+/connect.lock
+/libpeerconnection.log
+testem.log
+/typings
+
+# Screenshots from tests
+__screenshots__/

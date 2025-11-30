@@ -1,0 +1,50 @@
+<div class="login-container">
+  <div class="login-card">
+    <h1>Y15 Clean Energy</h1>
+    <h2>Login</h2>
+
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          [(ngModel)]="username"
+          required
+          autocomplete="username"
+          aria-required="true"
+          [disabled]="loading"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          required
+          autocomplete="current-password"
+          aria-required="true"
+          [disabled]="loading"
+        />
+      </div>
+
+      <div *ngIf="error" class="error-message" role="alert" aria-live="assertive">
+        {{ error }}
+      </div>
+
+      <button
+        type="submit"
+        class="login-button"
+        [disabled]="loading || !loginForm.valid"
+        aria-label="Login to Y15 Clean Energy Dashboard"
+      >
+        <span *ngIf="!loading">Login</span>
+        <span *ngIf="loading">Logging in...</span>
+      </button>
+    </form>
+  </div>
+</div>

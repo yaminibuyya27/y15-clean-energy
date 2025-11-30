@@ -1,0 +1,38 @@
+<div class="summary-container">
+  <h1>Investment Summary</h1>
+
+  <div class="chart-section" role="region" aria-labelledby="chart-heading">
+    <div *ngIf="loading" class="loading" role="status" aria-live="polite">
+      <p>Loading chart data...</p>
+    </div>
+
+    <div *ngIf="error" class="error" role="alert" aria-live="assertive">
+      <p>{{ error }}</p>
+    </div>
+
+    <div *ngIf="!loading && !error" class="chart-wrapper">
+      <canvas #investmentChart
+              role="img"
+              aria-label="Bar chart showing global clean energy investment by technology from 2020 to 2024">
+      </canvas>
+    </div>
+  </div>
+
+  <section class="explanation-section" role="region" aria-labelledby="explanation-heading">
+    <h2 id="explanation-heading">Chart Explanation</h2>
+    <p>
+      This chart displays the global investment trends in clean energy technologies from 2020 to 2024,
+      based on data from the IEA Renewables report. The visualization shows investment amounts in billions
+      of USD across different renewable energy sectors including Solar, Wind, Hydro, and Energy Storage.
+      According to the IEA analysis, solar energy has consistently attracted the highest investments,
+      reflecting the technology's improving cost-effectiveness and widespread adoption. Wind energy
+      follows closely, with significant growth driven by offshore wind development. Energy storage
+      investments have surged in recent years, supporting grid stability and electric vehicle adoption.
+      Hydroelectric power maintains steady investment levels as a mature renewable technology. The data
+      demonstrates a clear upward trajectory in clean energy investments, with total renewable energy
+      investment projected to reach over $630 billion by 2024, indicating strong market confidence and
+      policy support for the global energy transition described in the IEA forecast.
+    </p>
+    <app-source-reference></app-source-reference>
+  </section>
+</div>

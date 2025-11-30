@@ -1,0 +1,37 @@
+<div class="reports-container">
+  <h1>Regional Capacity Reports</h1>
+
+  <div class="chart-section" role="region" aria-labelledby="chart-heading">
+    <div *ngIf="loading" class="loading" role="status" aria-live="polite">
+      <p>Loading chart data...</p>
+    </div>
+
+    <div *ngIf="error" class="error" role="alert" aria-live="assertive">
+      <p>{{ error }}</p>
+    </div>
+
+    <div *ngIf="!loading && !error" class="chart-wrapper">
+      <canvas #regionalChart
+              role="img"
+              aria-label="Line chart showing regional clean energy capacity growth from 2020 to 2024">
+      </canvas>
+    </div>
+  </div>
+
+  <section class="explanation-section" role="region" aria-labelledby="explanation-heading">
+    <h2 id="explanation-heading">Chart Explanation</h2>
+    <p>
+      This line chart illustrates the growth of renewable energy capacity across major global regions from 2020 to 2024,
+      derived from the IEA Renewables analysis and forecast. The data is measured in megawatts (MW) and shows the total
+      installed renewable energy capacity for each region. According to the IEA report, Asia-Pacific leads in absolute
+      capacity due to China and India's large-scale solar and wind installations, with China alone accounting for a
+      significant portion of global renewable additions. Europe shows steady growth driven by offshore wind development
+      and solar expansion, particularly in Germany and Spain. North America displays consistent growth in both utility-scale
+      solar and wind projects, supported by policy incentives. Latin America demonstrates accelerating growth, primarily
+      from wind and hydroelectric projects. The Middle East & Africa region shows emerging growth in solar capacity,
+      driven by desert solar farms and government renewable energy initiatives. This regional analysis, based on IEA data,
+      helps identify global trends and highlights where clean energy adoption is most rapidly advancing through 2028.
+    </p>
+    <app-source-reference></app-source-reference>
+  </section>
+</div>

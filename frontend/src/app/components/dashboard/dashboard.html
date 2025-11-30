@@ -1,0 +1,18 @@
+<div class="dashboard-container">
+  <h1>Y15 - Clean Energy Innovations Dashboard</h1>
+
+  <section class="summary-section" role="region" aria-labelledby="summary-heading">
+    <h2 id="summary-heading">Recent Innovations in Clean Energy</h2>
+    <p>
+      The clean energy sector has experienced remarkable innovations over the past six months, driven by advancements in solar technology, battery storage, and green hydrogen production. Recent developments in perovskite solar cells have achieved record efficiencies exceeding 33%, promising more cost-effective solar power generation. Meanwhile, solid-state batteries are emerging as game-changers for electric vehicles, offering higher energy density and improved safety compared to traditional lithium-ion batteries. Green hydrogen, produced through renewable energy-powered electrolysis, is gaining traction as a clean fuel alternative for heavy industries and transportation. Furthermore, offshore wind technology has seen significant improvements with floating turbines capable of operating in deeper waters, unlocking vast new energy resources. Smart grid technologies incorporating AI and machine learning are optimizing energy distribution and reducing waste. Carbon capture and storage innovations are also advancing, with direct air capture facilities scaling up operations. These breakthroughs collectively represent a transformative period for the clean energy industry, accelerating the global transition toward sustainable energy systems and helping address climate change challenges.
+    </p>
+    <app-source-reference></app-source-reference>
+  </section>
+
+  <section class="technical-section" role="region" aria-labelledby="technical-heading">
+    <h2 id="technical-heading">Technical Implementation</h2>
+    <p>
+      This application is built as a Single Page Application (SPA) using Angular 21 for the frontend and Node.js with Express for the backend. The backend runs on port 3000 and uses MySQL as the database for storing chart data. JWT (JSON Web Tokens) are implemented for secure authentication, with tokens validated on each protected endpoint. The frontend communicates with the backend through HTTP REST APIs, fetching chart data asynchronously to populate dynamic visualizations. Chart.js library is used for rendering interactive charts on the Summary and Reports pages. The application follows accessibility best practices (WCAG guidelines) including semantic HTML, ARIA labels, and keyboard navigation support. Nginx serves the frontend on port 80, while the backend operates independently as a REST API service. The project is version-controlled using Git and hosted on GitHub, with sensitive credentials stored in environment variables rather than hardcoded values.
+    </p>
+  </section>
+</div>

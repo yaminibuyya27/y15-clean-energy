@@ -1,0 +1,22 @@
+# Dependencies
+node_modules
+
+# Environment variables
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# Database
+*.db
+*.sqlite3
+*.sqlite
+
+# Build output
+dist
+build
+
+# Temporary files
+*.tmp
+.cache
