@@ -20,7 +20,7 @@ interface RegionalData {
   providedIn: 'root',
 })
 export class Chart {
-  private apiUrl = `${API_URL}/api/charts`;
+  private apiUrl = `${API_URL}/api/dashboard`;
 
   // Cache storage
   private investmentCache$: Observable<{ success: boolean; data: InvestmentData[] }> | null = null;

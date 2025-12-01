@@ -2,7 +2,7 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const router = express.Router();
-const db = require('../config/database');
+const db = require('../config/database')();
 require('dotenv').config();
 
 router.post('/signup', async (req, res) => {
