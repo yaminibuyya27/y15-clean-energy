@@ -74,7 +74,7 @@ export class Summary implements OnInit {
         },
         options: {
           responsive: true,
-          maintainAspectRatio: true,
+          maintainAspectRatio: false,
           plugins: {
             title: {
               display: true,
